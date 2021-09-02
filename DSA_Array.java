@@ -78,12 +78,32 @@ class DSA_Array{
             System.out.print(arr[i]+" ");
         }
     }
+    public static void NegativeElimentOneSide(){
+        int[] arr = {-2,4,7,-6,9,-4};
+        int j=0;
+        for(int i=0; i<arr.length;i++){
+            if(arr[i]<0){
+                if(i!=j){
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+                j++;
+                
+            }
+        }
+        for(int i=0;i<arr.length;i++){
+            System.out.print(arr[i]+" ");
+        }
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int[] arr = {7,9,2,4,6,3};
         //ReverseArray(arr);
         //MaxAndMin(arr);
         //KthMinAndMax(arr);
-        Sort012();
+        //Sort012();
+        NegativeElimentOneSide();
     }
 }
