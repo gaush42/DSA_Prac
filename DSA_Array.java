@@ -96,6 +96,46 @@ class DSA_Array{
             System.out.print(arr[i]+" ");
         }
     }
+    public static void Union(){
+        int[] a={85, 25, 1, 32, 54, 6};
+        int[] b={85, 2};
+        int len = a.length + b.length;
+        int arr[] = new int[len];
+        int ind =0;
+        for(int i=0;i<a.length;i++){
+            arr[ind]=a[i];
+            ind+=1;
+        }
+        for(int i=0;i<b.length;i++){
+            arr[ind]=a[i];
+            ind+=1;
+        }
+        int n = ind;
+        Arrays.sort(arr);
+        int count = 1;
+        for(int i=1;i<n;i++){
+            if(arr[i]!=arr[i-1]){
+                continue;
+            }
+            count +=1;
+        }
+        
+        System.out.println(count);
+    }
+    public static void RotateArrayByOne(){
+        int a[] = {1,2,3,4,5};
+        int n = a.length;
+
+        int t = a[n-1];
+        for(int i=n-2;i>=0;i--){
+            a[i+1] = a[i];
+        }
+        a[0] = t;
+
+        for(int i=0;i<a.length;i++){
+            System.out.print(a[i]+" ");
+        }
+    }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -104,6 +144,8 @@ class DSA_Array{
         //MaxAndMin(arr);
         //KthMinAndMax(arr);
         //Sort012();
-        NegativeElimentOneSide();
+        //NegativeElimentOneSide();
+        //Union();
+        RotateArrayByOne();
     }
 }
