@@ -136,6 +136,30 @@ class DSA_Array{
             System.out.print(a[i]+" ");
         }
     }
+    public static void TravelPass(){
+        Scanner sc = new Scanner(System.in);
+        int t=0;
+        if(sc.hasNextInt()){
+            t=sc.nextInt();
+        }
+        while(t>0){
+
+            int n=sc.nextInt();
+            //int a=sc.nextInt();
+            //int b=sc.nextInt();
+            char[] s = new char[n];
+            for(int i=0;i<n;i++){
+                s[i]=sc.next().charAt(i);
+            }
+
+            for(int i=0;i<n;i++){
+                System.out.println(s[i]);
+            }
+
+
+            t--;
+        }
+    }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -146,6 +170,7 @@ class DSA_Array{
         //Sort012();
         //NegativeElimentOneSide();
         //Union();
-        RotateArrayByOne();
+        //RotateArrayByOne();
+        TravelPass();
     }
 }
